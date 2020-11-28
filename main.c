@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 #define SHELLCODE_SIZE 32
 
 usigned char *shellcode =
@@ -14,4 +17,6 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Usage: meltdown <pid>\n");
         exit(1);
     }
+    target = atoi(argv[1]);
+    return 0;
 }
